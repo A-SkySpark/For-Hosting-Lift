@@ -1,10 +1,11 @@
-let floors = prompt("Enter the number of floors you want.");
+let floors = prompt("Enter the number of FLOORS you want.");
+let lifts = prompt("Enter the number of LIFTS you want");
 
 let container = document.getElementById("container");
 
 
 
-    for(let i = floors ; i > 0 ; i--){
+for(let i = floors ; i > 0 ; i--){
 
         //creating the Buttons for calling the lift
         let buttonPalette = document.createElement('div');
@@ -28,9 +29,12 @@ let container = document.getElementById("container");
         let floorNum = document.createTextNode(''+i)
         floorId.appendChild(floorNum);
 
-        buttonPalette.appendChild(floorId);
+       
         buttonPalette.appendChild(buttonUp);
+        buttonPalette.appendChild(floorId);
         buttonPalette.appendChild(buttonDown);
+        
+       
         
 
         //creating the Space for Lifts - 'lift-duct'
@@ -41,13 +45,33 @@ let container = document.getElementById("container");
         //creating the floor div (holds buttons and liftDuct)
         let floorElement = document.createElement('div');
         floorElement.classList.add("floor");
+
+        
         floorElement.appendChild(buttonPalette);
         floorElement.appendChild(liftDuct);
 
 
         container.appendChild(floorElement);
 
+        //creating lift
 
+        if(i==1){
+            
+            for(let i = 0 ; i < lifts ; i++){
+                let lift = document.createElement('div');
+                lift.classList.add('lift');
+                
+
+                let liftDoorLeft = document.createElement('div');
+                liftDoorLeft.classList.add('lift-door-left');
+                let liftDoorRight = document.createElement('div');
+                liftDoorRight.classList.add('lift-door-right');
+                lift.appendChild(liftDoorLeft);
+                lift.appendChild(liftDoorRight);
+
+                liftDuct.appendChild(lift);
+            }
+        }
         // let divElementText = document.createTextNode('floor'+i)
         // divElement.appendChild(divElementText)
     }
