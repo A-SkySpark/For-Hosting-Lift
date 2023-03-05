@@ -16,10 +16,89 @@ body{
     font-weight: 700;
     color: #2B3467;
     text-align: center;
+    
+}
+
+#prompt-box{
+    color: #FCFFE7;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: 550;
+
+    background-color: #2B3467;
+    border: #EB455F solid 3px;
+    border-radius: 15px;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 350px;
+    height: auto;
+
+    margin-left: 39%;
+    margin-right: 32%;
+    margin-top: 10%;
 }
 
 ul{
     list-style: none;
+}
+
+li{
+    padding: 0 0 12px 0;
+    justify-content: space-between;
+}
+
+input{
+    border: none;
+    border-radius: 3px;
+    margin-left: 13px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align: center;
+
+    height: 24px;
+    width: 40px;
+
+    margin-right: 30px;
+}
+
+
+.generate{
+    border: none;
+    border-radius: 5px;
+    background-color: #FCFFE7;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    font-weight: 800;
+    color: #2B3467;
+
+    width: 80px;
+    height: 24px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+/* .twoButtons{
+    border: none;
+    border-radius: 5px;
+    background-color: #FCFFE7;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    font-weight: 800;
+    color: #2B3467;
+
+    width: 100px;
+    height: 24px;
+    margin-left: 100px;
+} */
+
+.generate:hover {
+    background-color: #EB455F;
+    transition: .3s;
 }
 
 .heading{
@@ -28,14 +107,20 @@ ul{
     font-weight: 700;
     color: #2B3467;
     text-align: center;
+}
 
+#pending{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2B3467;
+
+    margin-left: 11%;
 }
 
 #container{
     background-color: #2B3467;
     border-radius: 10px;
-    align-items: center;
-    justify-content: space-between;
     margin-left: 10%;
     margin-right: 10%;
     padding: 1rem 1rem 1rem 1rem;
@@ -43,8 +128,9 @@ ul{
 }
 
 .floor{
-    display: flex
-}
+    display: flex;
+    justify-content: space-between;
+} 
 
 .liftDuct{
     display: inline-flex;
@@ -53,7 +139,15 @@ ul{
     background-color: #FCFFE7;
     margin: .25rem 0 .25rem 0;
     border-radius: 10px;
-    overflow:hidden;
+}
+
+.lift-holder{
+    display: inline-flex;
+    height: 6rem;
+    background: rgba(red, 0, 0, .5);
+    position: absolute;
+    margin: 0rem 0rem 1rem 0rem;
+    border-radius: 10px;
 }
 
 .buttonPalette{
@@ -78,15 +172,8 @@ ul{
     background-color: #EB455F;
     transition: .2s;
 }
-/* 
-.up:hover{
-}
-
-.down:hover{
-} */
 
 .floorId{
-
     flex: 0.1;
     font-size: 15px;
     font-weight: 700;
@@ -110,7 +197,6 @@ ul{
     margin: .3rem .3rem .3rem .3rem;
     overflow: hidden;
     justify-content: space-between;
-    
 }
 
 .lift-door-left{
@@ -123,10 +209,11 @@ ul{
 .lift-door-right{
     background-color: #2B3467;
     height: 5.4rem;
-    width: 1.98rem;
-    
+    width: 1.98rem;  
 }
 
-.lift:hover .lift-door-left{   /* to test the hover effect */
+.open-doors{  
     margin-right: 4.2rem;   
+    transition: 2.5s;
 }
+
