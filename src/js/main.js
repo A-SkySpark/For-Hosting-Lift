@@ -97,7 +97,7 @@ const generate = () => {
    //PENDING: to add check for non-Integer or negative integer input. 
 
     if(floors == 0 && lifts == 0){
-       alert( "You'll enjoy more if there were lifts and floors.");
+       alert( "You'll enjoy more if there were lifts and floors. (Please enter values greater than zero)");
         
     }
 
