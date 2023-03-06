@@ -345,6 +345,3 @@ const buildIt = () => {
 };
 
 buildForm();
-
-
-
